@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kanimozhi | BCA Resume</title>
   <meta name="description" content="Professional resume of Kanimozhi, Bachelor of Computer Applications student." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -23,9 +32,19 @@
     }
 
     @media print {
-      body { background: white; padding: 0; }
-      .resume-wrapper { box-shadow: none; border-radius: 0; }
-      .print-btn { display: none !important; }
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .resume-wrapper {
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .print-btn {
+        display: none !important;
+      }
     }
 
     .print-btn {
@@ -41,18 +60,22 @@
       font-size: 14px;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(79,111,234,0.35);
+      box-shadow: 0 4px 14px rgba(79, 111, 234, 0.35);
       transition: background 0.2s, transform 0.15s;
       z-index: 999;
     }
-    .print-btn:hover { background: #3a56d4; transform: translateY(-1px); }
+
+    .print-btn:hover {
+      background: #3a56d4;
+      transform: translateY(-1px);
+    }
 
     .resume-wrapper {
       width: 100%;
       max-width: 860px;
       background: white;
       border-radius: 18px;
-      box-shadow: 0 10px 50px rgba(0,0,0,0.10);
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.10);
       overflow: hidden;
     }
 
@@ -66,35 +89,52 @@
       position: relative;
       overflow: hidden;
     }
+
     .header::before {
       content: '';
       position: absolute;
-      top: -60px; right: -60px;
-      width: 220px; height: 220px;
+      top: -60px;
+      right: -60px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.08);
     }
+
     .header::after {
       content: '';
       position: absolute;
-      bottom: -40px; left: 30%;
-      width: 140px; height: 140px;
+      bottom: -40px;
+      left: 30%;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.06);
     }
 
     .photo-wrap {
       flex-shrink: 0;
-      width: 110px; height: 110px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
-      border: 4px solid rgba(255,255,255,0.85);
+      border: 4px solid rgba(255, 255, 255, 0.85);
       overflow: hidden;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.20);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.20);
       background: #c7d5fb;
-      display: flex; align-items: center; justify-content: center;
-      position: relative; z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
     }
-    .photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; transform: scale(1.5); }
+
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      transform: scale(1.5);
+    }
 
     .photo-placeholder {
       font-size: 42px;
@@ -102,7 +142,10 @@
       font-weight: 700;
     }
 
-    .header-info { position: relative; z-index: 1; }
+    .header-info {
+      position: relative;
+      z-index: 1;
+    }
 
     .header-info h1 {
       font-family: 'Playfair Display', serif;
@@ -111,9 +154,10 @@
       letter-spacing: 0.5px;
       margin-bottom: 4px;
     }
+
     .header-info .degree {
       font-size: 0.9rem;
-      color: rgba(255,255,255,0.88);
+      color: rgba(255, 255, 255, 0.88);
       font-weight: 500;
       margin-bottom: 14px;
       letter-spacing: 0.3px;
@@ -124,17 +168,28 @@
       flex-wrap: wrap;
       gap: 10px 20px;
     }
+
     .contact-item {
       display: flex;
       align-items: center;
       gap: 6px;
       font-size: 0.78rem;
-      color: rgba(255,255,255,0.92);
+      color: rgba(255, 255, 255, 0.92);
       font-weight: 400;
     }
-    .contact-item a { color: rgba(255,255,255,0.92); text-decoration: none; }
-    .contact-item a:hover { text-decoration: underline; }
-    .contact-icon { font-size: 0.85rem; }
+
+    .contact-item a {
+      color: rgba(255, 255, 255, 0.92);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-icon {
+      font-size: 0.85rem;
+    }
 
     /* ── BODY GRID ── */
     .body-grid {
@@ -155,8 +210,13 @@
     }
 
     /* ── SECTION SHARED ── */
-    .section { margin-bottom: 28px; }
-    .section:last-child { margin-bottom: 0; }
+    .section {
+      margin-bottom: 28px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
 
     .section-title {
       font-size: 0.68rem;
@@ -169,6 +229,7 @@
       align-items: center;
       gap: 8px;
     }
+
     .section-title::after {
       content: '';
       flex: 1;
@@ -178,16 +239,21 @@
     }
 
     /* Skills */
-    .skill-list { list-style: none; }
+    .skill-list {
+      list-style: none;
+    }
+
     .skill-item {
       margin-bottom: 10px;
     }
+
     .skill-name {
       font-size: 0.82rem;
       font-weight: 500;
       color: #374151;
       margin-bottom: 4px;
     }
+
     .skill-bar-bg {
       width: 100%;
       height: 6px;
@@ -195,6 +261,7 @@
       border-radius: 99px;
       overflow: hidden;
     }
+
     .skill-bar-fill {
       height: 100%;
       background: linear-gradient(to right, #4f6fea, #a78bfa);
@@ -202,7 +269,10 @@
     }
 
     /* Sidebar info blocks */
-    .info-block { margin-bottom: 6px; }
+    .info-block {
+      margin-bottom: 6px;
+    }
+
     .info-label {
       font-size: 0.7rem;
       font-weight: 600;
@@ -211,13 +281,21 @@
       color: #9ba8c5;
       margin-bottom: 1px;
     }
+
     .info-value {
       font-size: 0.82rem;
       color: #374151;
       word-break: break-word;
     }
-    .info-value a { color: #4f6fea; text-decoration: none; }
-    .info-value a:hover { text-decoration: underline; }
+
+    .info-value a {
+      color: #4f6fea;
+      text-decoration: none;
+    }
+
+    .info-value a:hover {
+      text-decoration: underline;
+    }
 
     /* Certifications */
     .cert-item {
@@ -227,11 +305,13 @@
       padding: 8px 10px;
       margin-bottom: 8px;
     }
+
     .cert-name {
       font-size: 0.82rem;
       font-weight: 600;
       color: #374151;
     }
+
     .cert-org {
       font-size: 0.74rem;
       color: #6b7280;
@@ -246,18 +326,23 @@
     }
 
     /* Education */
-    .edu-item { margin-bottom: 14px; }
+    .edu-item {
+      margin-bottom: 14px;
+    }
+
     .edu-degree {
       font-size: 0.9rem;
       font-weight: 700;
       color: #1e293b;
     }
+
     .edu-school {
       font-size: 0.82rem;
       color: #4f6fea;
       font-weight: 500;
       margin-top: 2px;
     }
+
     .edu-year {
       font-size: 0.77rem;
       color: #9ca3af;
@@ -272,7 +357,11 @@
       padding: 14px 16px;
       margin-bottom: 12px;
     }
-    .project-item:last-child { margin-bottom: 0; }
+
+    .project-item:last-child {
+      margin-bottom: 0;
+    }
+
     .project-title {
       font-size: 0.88rem;
       font-weight: 700;
@@ -281,6 +370,7 @@
       align-items: center;
       gap: 7px;
     }
+
     .project-badge {
       font-size: 0.62rem;
       font-weight: 600;
@@ -291,18 +381,21 @@
       border-radius: 99px;
       border: 1px solid #c7d5fb;
     }
+
     .project-desc {
       font-size: 0.8rem;
       color: #6b7280;
       margin-top: 5px;
       line-height: 1.6;
     }
+
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
       margin-top: 8px;
     }
+
     .tag {
       font-size: 0.68rem;
       background: #ede9fe;
@@ -319,6 +412,7 @@
       border-radius: 8px;
       padding: 14px 16px;
     }
+
     .objective-text {
       font-size: 0.85rem;
       color: #374151;
@@ -327,219 +421,250 @@
     }
 
     @media (max-width: 640px) {
-      .body-grid { grid-template-columns: 1fr; }
-      .sidebar { border-right: none; border-bottom: 1px solid #e8edf7; }
-      .header { flex-direction: column; text-align: center; padding: 32px 24px 28px; }
-      .contact-row { justify-content: center; }
-      .main { padding: 24px 20px; }
-      .sidebar { padding: 24px 20px; }
+      .body-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #e8edf7;
+      }
+
+      .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px 28px;
+      }
+
+      .contact-row {
+        justify-content: center;
+      }
+
+      .main {
+        padding: 24px 20px;
+      }
+
+      .sidebar {
+        padding: 24px 20px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<button class="print-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+  <button class="print-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
 
-<div class="resume-wrapper">
+  <div class="resume-wrapper">
 
-  <!-- ══ HEADER ══ -->
-  <div class="header">
-    <div class="photo-wrap">
-      <!-- Profile Photo — replace src with your actual photo path or URL -->
-      <img
-        src="profile.jpg"
-        alt="C:\Users\kanimozhi\Pictures"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      />
-      <span class="photo-placeholder" style="display:none;">K</span>
-    </div>
+    <!-- ══ HEADER ══ -->
+    <div class="header">
+      <div class="photo-wrap">
+        <!-- Profile Photo — replace src with your actual photo path or URL -->
+        <img src="profile.jpg" alt="C:\Users\kanimozhi\Pictures"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="photo-placeholder" style="display:none;">K</span>
+      </div>
 
-    <div class="header-info">
-      <h1>Kanimozhi</h1>
-      <p class="degree">Bachelor of Computer Applications (BCA) &nbsp;|&nbsp; Fresher</p>
+      <div class="header-info">
+        <h1>Kanimozhi</h1>
+        <p class="degree">Bachelor of Computer Applications (BCA) &nbsp;|&nbsp; Fresher</p>
 
-      <div class="contact-row">
-        <span class="contact-item" id="contact-phone">
-          <span class="contact-icon">📞</span> 7092355939
-        </span>
-        <span class="contact-item" id="contact-whatsapp">
-          <span class="contact-icon">💬</span>
-          <a href="https://wa.me/917092355939" target="_blank">WhatsApp</a>
-        </span>
-        <span class="contact-item" id="contact-linkedin">
-          <span class="contact-icon">🔗</span>
-          <a href="#" target="_blank">[LinkedIn Profile]</a>
-        </span>
+        <div class="contact-row">
+          <span class="contact-item" id="contact-phone">
+            <span class="contact-icon">📞</span> 7092355939
+          </span>
+          <span class="contact-item" id="contact-whatsapp">
+            <span class="contact-icon">💬</span>
+            <a href="https://wa.me/917092355939" target="_blank">WhatsApp</a>
+          </span>
+          <span class="contact-item" id="contact-linkedin">
+            <span class="contact-icon">🔗</span>
+            <a href="#" target="_blank">[LinkedIn Profile]</a>
+          </span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ══ BODY ══ -->
-  <div class="body-grid">
+    <!-- ══ BODY ══ -->
+    <div class="body-grid">
 
-    <!-- ── SIDEBAR ── -->
-    <aside class="sidebar">
+      <!-- ── SIDEBAR ── -->
+      <aside class="sidebar">
 
-      <!-- Skills -->
-      <div class="section">
-        <div class="section-title">Skills</div>
-        <ul class="skill-list">
-          <li class="skill-item">
-            <div class="skill-name">Python Programming</div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-name">HTML &amp; CSS</div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:55%"></div></div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-name">MS Office Suite</div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%"></div></div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-name">Communication</div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-name">Problem Solving</div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:45%"></div></div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Education -->
-      <div class="section">
-        <div class="section-title">Education</div>
-        <div class="edu-item">
-          <div class="edu-degree">Bachelor of Computer Applications</div>
-          <div class="edu-school">St. Peter's Institution of Higher Education</div>
-          <div class="edu-year">2024 – 2026 &nbsp;(Expected)</div>
+        <!-- Skills -->
+        <div class="section">
+          <div class="section-title">Skills</div>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-name">Python Programming</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" style="width:50%"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">HTML &amp; CSS</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" style="width:55%"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">MS Office Suite</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" style="width:65%"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Communication</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" style="width:70%"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Problem Solving</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" style="width:45%"></div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="edu-item">
-          <div class="edu-degree">Higher Secondary (12th)</div>
-          <div class="edu-school">Railway Senior Secondary School</div>
-          <div class="edu-year">2023 – 2024</div>
-        </div>
-      </div>
 
-      <!-- Certifications -->
-      <div class="section">
-        <div class="section-title">Certifications</div>
-        <div class="cert-item">
-          <div class="cert-name">Python for Beginners</div>
-          <div class="cert-org">Coursera / NPTEL &nbsp;·&nbsp; 2024</div>
+        <!-- Education -->
+        <div class="section">
+          <div class="section-title">Education</div>
+          <div class="edu-item">
+            <div class="edu-degree">Bachelor of Computer Applications</div>
+            <div class="edu-school">St. Peter's Institution of Higher Education</div>
+            <div class="edu-year">2024 – 2026 &nbsp;(Expected)</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">Higher Secondary (12th)</div>
+            <div class="edu-school">Railway Senior Secondary School</div>
+            <div class="edu-year">2023 – 2024</div>
+          </div>
         </div>
-        <div class="cert-item">
-          <div class="cert-name">Web Development Basics</div>
-          <div class="cert-org">Internshala / Udemy &nbsp;·&nbsp; 2024</div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-name">MS Office Essentials</div>
-          <div class="cert-org">[Certification Body] &nbsp;·&nbsp; [Year]</div>
-        </div>
-      </div>
 
-      <!-- Languages -->
-      <div class="section">
-        <div class="section-title">Languages</div>
-        <div class="info-block">
-          <div class="info-value">Tamil &nbsp;·&nbsp; <span style="color:#9ca3af;font-size:0.76rem;">Native</span></div>
+        <!-- Certifications -->
+        <div class="section">
+          <div class="section-title">Certifications</div>
+          <div class="cert-item">
+            <div class="cert-name">Python for Beginners</div>
+            <div class="cert-org">Coursera / NPTEL &nbsp;·&nbsp; 2024</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">Web Development Basics</div>
+            <div class="cert-org">Internshala / Udemy &nbsp;·&nbsp; 2024</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">MS Office Essentials</div>
+            <div class="cert-org">[Certification Body] &nbsp;·&nbsp; [Year]</div>
+          </div>
         </div>
-        <div class="info-block">
-          <div class="info-value">English &nbsp;·&nbsp; <span style="color:#9ca3af;font-size:0.76rem;">Intermediate</span></div>
+
+        <!-- Languages -->
+        <div class="section">
+          <div class="section-title">Languages</div>
+          <div class="info-block">
+            <div class="info-value">Tamil &nbsp;·&nbsp; <span style="color:#9ca3af;font-size:0.76rem;">Native</span>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-value">English &nbsp;·&nbsp; <span
+                style="color:#9ca3af;font-size:0.76rem;">Intermediate</span></div>
+          </div>
         </div>
-      </div>
 
-    </aside>
+      </aside>
 
-    <!-- ── MAIN ── -->
-    <main class="main">
+      <!-- ── MAIN ── -->
+      <main class="main">
 
-      <!-- Career Objective -->
-      <div class="section">
-        <div class="section-title">Career Objective</div>
-        <div class="objective-box">
-          <p class="objective-text">
-            To start my career in a good organization where I can apply my academic knowledge,
-            learn new technologies, gain hands-on experience, and grow both personally and
-            professionally in the field of computer applications.
+        <!-- Career Objective -->
+        <div class="section">
+          <div class="section-title">Career Objective</div>
+          <div class="objective-box">
+            <p class="objective-text">
+              To start my career in a good organization where I can apply my academic knowledge,
+              learn new technologies, gain hands-on experience, and grow both personally and
+              professionally in the field of computer applications.
+            </p>
+          </div>
+        </div>
+
+        <!-- Profile Summary -->
+        <div class="section">
+          <div class="section-title">Profile Summary</div>
+          <p class="summary-text">
+            I am a motivated and enthusiastic BCA fresher with a strong desire to learn and grow in
+            the IT industry. I have foundational knowledge in computer applications, basic programming
+            using Python, and web development using HTML and CSS. I am a quick learner with good
+            communication skills and a positive attitude towards taking on challenges. I am looking
+            for an opportunity to contribute, learn, and develop my skills in a professional
+            environment.
           </p>
         </div>
-      </div>
 
-      <!-- Profile Summary -->
-      <div class="section">
-        <div class="section-title">Profile Summary</div>
-        <p class="summary-text">
-          I am a motivated and enthusiastic BCA fresher with a strong desire to learn and grow in
-          the IT industry. I have foundational knowledge in computer applications, basic programming
-          using Python, and web development using HTML and CSS. I am a quick learner with good
-          communication skills and a positive attitude towards taking on challenges. I am looking
-          for an opportunity to contribute, learn, and develop my skills in a professional
-          environment.
-        </p>
-      </div>
+        <!-- Projects -->
+        <div class="section">
+          <div class="section-title">Projects</div>
 
-      <!-- Projects -->
-      <div class="section">
-        <div class="section-title">Projects</div>
-
-        <div class="project-item">
-          <div class="project-title">
-            Personal Portfolio Webpage
-            <span class="project-badge">Academic</span>
+          <div class="project-item">
+            <div class="project-title">
+              Personal Portfolio Webpage
+              <span class="project-badge">Academic</span>
+            </div>
+            <p class="project-desc">
+              Designed and developed a simple personal portfolio website using HTML and CSS.
+              The page includes sections for profile, skills, and contact information with a clean
+              and responsive layout.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Web Design</span>
+            </div>
           </div>
-          <p class="project-desc">
-            Designed and developed a simple personal portfolio website using HTML and CSS.
-            The page includes sections for profile, skills, and contact information with a clean
-            and responsive layout.
-          </p>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">Web Design</span>
+
+          <div class="project-item">
+            <div class="project-title">
+              Simple Calculator (Python)
+              <span class="project-badge">Mini Project</span>
+            </div>
+            <p class="project-desc">
+              Built a command-line calculator using Python that performs basic arithmetic operations
+              — addition, subtraction, multiplication, and division — with input validation and
+              error handling.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Logic</span>
+              <span class="tag">CLI</span>
+            </div>
           </div>
+
+          <div class="project-item">
+            <div class="project-title">
+              Student Record Management System
+              <span class="project-badge">BCA Project</span>
+            </div>
+            <p class="project-desc">
+              Developed a mini academic project to manage student records — adding, updating, and
+              displaying data — as part of the BCA curriculum. The project focused on basic data
+              handling and file operations using Python.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">File Handling</span>
+              <span class="tag">Data Management</span>
+            </div>
+          </div>
+
         </div>
 
-        <div class="project-item">
-          <div class="project-title">
-            Simple Calculator (Python)
-            <span class="project-badge">Mini Project</span>
-          </div>
-          <p class="project-desc">
-            Built a command-line calculator using Python that performs basic arithmetic operations
-            — addition, subtraction, multiplication, and division — with input validation and
-            error handling.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Logic</span>
-            <span class="tag">CLI</span>
-          </div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-title">
-            Student Record Management System
-            <span class="project-badge">BCA Project</span>
-          </div>
-          <p class="project-desc">
-            Developed a mini academic project to manage student records — adding, updating, and
-            displaying data — as part of the BCA curriculum. The project focused on basic data
-            handling and file operations using Python.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">File Handling</span>
-            <span class="tag">Data Management</span>
-          </div>
-        </div>
-
-      </div>
-
-    </main>
-  </div><!-- end body-grid -->
-</div><!-- end resume-wrapper -->
+      </main>
+    </div><!-- end body-grid -->
+  </div><!-- end resume-wrapper -->
 
 </body>
+
 </html>
