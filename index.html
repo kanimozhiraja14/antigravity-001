@@ -158,7 +158,7 @@
       justify-content: center;
       position: relative;
       z-index: 1;
-      animation: pulseRing 2.2s ease-out infinite, fadeIn 0.9s ease both;
+      animation: fadeIn 0.9s ease both;
     }
 
     .photo-wrap img {
@@ -285,14 +285,33 @@
       list-style: none;
     }
 
+    @keyframes skillBounceIn {
+      0%   { opacity: 0; transform: translateX(-20px); }
+      60%  { opacity: 1; transform: translateX(6px); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes skillGlow {
+      0%, 100% { box-shadow: 0 0 0px rgba(79, 111, 234, 0); }
+      50%       { box-shadow: 0 0 8px rgba(167, 139, 250, 0.7); }
+    }
+
     .skill-item {
       margin-bottom: 10px;
+      opacity: 0;
+      animation: skillBounceIn 0.55s ease forwards;
       transition: transform 0.2s ease;
     }
 
     .skill-item:hover {
       transform: translateX(4px);
     }
+
+    .skill-item:nth-child(1) { animation-delay: 0.1s; }
+    .skill-item:nth-child(2) { animation-delay: 0.2s; }
+    .skill-item:nth-child(3) { animation-delay: 0.3s; }
+    .skill-item:nth-child(4) { animation-delay: 0.4s; }
+    .skill-item:nth-child(5) { animation-delay: 0.5s; }
 
     .skill-name {
       font-size: 0.82rem;
@@ -315,6 +334,7 @@
       border-radius: 99px;
       width: 0%;
       transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: skillGlow 2.4s ease-in-out infinite;
     }
 
     /* Sidebar info blocks */
