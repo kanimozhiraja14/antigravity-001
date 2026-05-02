@@ -420,6 +420,35 @@
       font-style: italic;
     }
 
+    /* Contact footer */
+    .contact-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .contact-footer-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #374151;
+    }
+
+    .contact-footer-icon {
+      font-size: 1rem;
+    }
+
+    .contact-footer-item a {
+      color: #4f6fea;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-footer-item a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 640px) {
       .body-grid {
         grid-template-columns: 1fr;
@@ -470,19 +499,7 @@
         <h1>Kanimozhi</h1>
         <p class="degree">Bachelor of Computer Applications (BCA) &nbsp;|&nbsp; Fresher</p>
 
-        <div class="contact-row">
-          <span class="contact-item" id="contact-phone">
-            <span class="contact-icon">📞</span> 7092355939
-          </span>
-          <span class="contact-item" id="contact-whatsapp">
-            <span class="contact-icon">💬</span>
-            <a href="https://wa.me/917092355939" target="_blank">WhatsApp</a>
-          </span>
-          <span class="contact-item" id="contact-linkedin">
-            <span class="contact-icon">🔗</span>
-            <a href="#" target="_blank">[LinkedIn Profile]</a>
-          </span>
-        </div>
+
       </div>
     </div>
 
@@ -659,6 +676,17 @@
             </div>
           </div>
 
+        </div>
+
+        <!-- Contact -->
+        <div class="section" id="contact-section">
+          <div class="section-title">Contact</div>
+          <div class="contact-footer">
+            <span class="contact-footer-item">
+              <span class="contact-footer-icon">✉️</span>
+              <a href="mailto:kanimozhiraja14@gmail.com" id="contact-email">kanimozhiraja14@gmail.com</a>
+            </span>
+          </div>
         </div>
 
       </main>
